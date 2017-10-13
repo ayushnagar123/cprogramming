@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int n,j,i,k,l,m,o,p,q,t1,t2,count=0;
+    printf("ENTER NO. OF ELEMENTS IN EACH ARRAY \n");
+    scanf("%d",&n);
+    int a[n],b[n],c[2*n];
+    printf("ENTER ELEMENTS OF 1ST ARRAY\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("ENTER ELEMENTS OF 2ND ARRAY\n");
+    for(j=0;j<n;j++)
+    {
+        scanf("%d",&b[j]);
+    }
+    for(k=0;k<n-1;k++)
+    {for(l=0;l<n-k-1;l++)
+    {
+        if(a[l]>a[l+1])
+        {
+            t1=a[l];
+            a[l]=a[l+1];
+            a[l+1]=t1;
+        }
+        if(b[l]>b[l+1])
+        {
+            t2=b[l];
+            b[l]=b[l+1];
+            b[l+1]=t2;
+        }
+    }
+    }
+    for(m=0;m<n;m++)
+    {
+        c[m]=a[m];
+    }
+    for(o=n;o<(2*n);o++)
+    {
+        c[o]=b[count];
+        count++;
+    }int t3;
+    for(p=0;p<((2*n)-1);p++)
+    {for(q=0;q<((2*n)-p-1);q++)
+    {
+        if(c[q]>c[q+1])
+        {t3=c[q];
+        c[q]=c[q+1];
+        c[q+1]=t3;
+    }}
+    }int r;
+    for(r=0;r<(2*n);r++)
+    {
+    printf("%d ",c[r]);
+    }
+    return 0;
+}
