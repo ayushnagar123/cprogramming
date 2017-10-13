@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    int i , j , sp,rows;
+    char ch='A';
+    printf("Enter the no of rows:- ");
+    scanf("\n%d",&rows);
+    for (i=0  ;i<rows ; i++)
+    {
+        ch='A';
+        for(j=rows;j>i;j--)
+        {
+            printf("%c",ch);
+            ch++;
+        }
+        for(sp=1 ;sp<=(i*2-1);sp++)
+        {
+            printf(" ");
+        }
+        ch--;
+        if(sp==1)
+        {
+            ch--;
+        }
+        for( ;ch>='A';ch--)
+        {
+            printf("%c",ch);
+
+        }
+
+        printf("\n");
+    }
+    return(0);
+}
