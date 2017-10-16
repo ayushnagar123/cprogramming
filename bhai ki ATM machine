@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int amount,i=1;
+    for (;i>0;)
+    {printf("\n ENTER AMOUNT TO BE WITHDRAW");
+    scanf("%d",&amount);
+    int a=floor(amount/1000);
+    int b=(amount%1000);
+    int c=floor(b/500);
+    int d=b%500;
+    int e=floor(d/100);
+    printf("no of thousand notes = %d \n",a);
+    printf("no of five hundred notes = %d \n",c);
+    printf("no of hundreds notes = %d",e);}
+    return 0;
+
+}
