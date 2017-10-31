@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[4];
+    int *p1=&a[0];
+    int *p2=&a[1];
+    int *p3=&a[2];
+    int *p4=&a[3];
+    int *p5=&a[4];
+
+    cout << "the address of a[0] is" <<p1<<endl;
+    cout << "the address of a[1] is" <<p2<<endl;
+    cout << "the address of a[2] is" <<p3<<endl;
+    cout << "the address of a[3] is" <<p4<<endl;
+    cout << "the address of a[4] is" <<p5<<endl;
+    return 0;
+}
