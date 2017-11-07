@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int len , a[1000] , i , j ,k=0 , c=0;
+    scanf("\n%d",&len);
+    int arr[len];
+    
+    for(i=0 ;i<len ; i++)
+    {
+        scanf("\n%d",&arr[i]);
+    }
+    
+    for(i=0;i<len ; i++)
+    {
+        k=0;
+        c=0;
+        for(j=1 ; j<=arr[i];j++)
+            {
+                if( j%10==3 || j%10==7)
+                    continue;
+                a[k] = j;
+                k++;
+            }
+        for(j=0 ; j<k ; j++)
+        {
+            c++;
+        }
+    printf("\n%d",c);
+    }
+    return(0);
+}
