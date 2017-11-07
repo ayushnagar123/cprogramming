@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int l , n ,k , hold , c=0 , r=0;
+    scanf("\n%d",&l);
+    scanf("\n%d",&n);
+    scanf("\n%d",&k);
+    hold=n;
+    while(hold!=0)
+    {
+        c++;
+        hold/=10;
+    }
+    if(c==l)
+      {
+         r = n%k;
+         printf("\n%d",r);
+      }
+    return(0);
+}
