@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int q ,arr[10] ,i ,j,ctr=0;
+
+    scanf("\n%d",&len);
+    scanf("\n%c",&str);
+    printf("\n");
+    scanf("\n%d",&q);
+    for(i=0;i<q;i++)
+    {
+        scanf("\n%d",&arr[i]);
+    }
+
+    for(i=0 ; i<q ; i++)
+    {
+        for(j=0 ; j<len ; j++)
+        {
+            ctr++;
+            if(str[j]=='B')
+                arr[i]--;
+            if(str[j]=='E')
+                arr[i]++;
+            if(arr[i]==0)
+                break;
+
+        }
+        printf("\n%d",ctr);
+        ctr=0;
+    }
+
+}
