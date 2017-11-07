@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+
+    int len, q ,arr[10] ,i ,j,ctr=0;
+
+    scanf("\n%d",&len);
+    char str[len+1];
+    scanf("\n%s",&str);
+    printf("\n");
+    scanf("\n%d",&q);
+    printf("\n");
+
+    for(i=0;i<q;i++)
+    {
+        scanf("\n%d",&arr[i]);
+    }
+
+    for(i=0 ; i<q ; i++)
+    {
+        while(arr[i]!=0)
+        {
+            ctr++;
+
+        for(j=0 ; j<len ; j++)
+        {
+
+            if(str[j]=='B')
+               {
+                    arr[i]--;
+
+
+               }
+
+            if(str[j]=='E')
+
+                    {
+                        arr[i]++;
+
+                    }
+            if(arr[i]==0)
+
+              {
+                  printf("\n%d",ctr);
+                  ctr=0;
+                    break;
+              }
+            }
+        }
+        ctr=0;
+    }
+
+}
