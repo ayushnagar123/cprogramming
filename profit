@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n , m, k,highest=0 , i;
+    scanf("\n%d %d %d",&n ,&m , &k);
+    int a[n],b[n];
+    //printf("\n");
+    for(i=0 ; i<n ; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    //printf("\n");
+    for(i=0 ; i<n ; i++)
+    {
+        scanf("%d",&b[i]);
+    }
+
+    if(n>1 && n<101 && m>1 && m<101 && k>1 && k<101)
+    {
+        highest = m*k;
+        for(i=0 ; i<n ; i++)
+        {
+            if(a[i]>1 && a[i]<1001 && b[i]>1 && b[i]<1001)
+            {
+
+                if(a[i]*b[i]*m > highest)
+                    highest = a[i]*b[i]*m;
+            }
+        }
+        printf("\n%d",highest);
+    }
+    else
+        return(0);
+
+}
